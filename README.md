@@ -1,1 +1,2 @@
-# Magicians
+# Node fishbone
+Skeleton for node application
