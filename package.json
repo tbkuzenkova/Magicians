@@ -19,6 +19,7 @@
     "express-jwt": "^3.3.0",
     "express-minify": "^0.1.6",
     "jsonwebtoken": "^5.4.1",
+    "less-middleware": "^2.2.0",
     "log4js": "^0.6.29",
     "mongoose": "^4.2.5",
     "morgan": "~1.6.1",
