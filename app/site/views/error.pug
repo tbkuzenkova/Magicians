@@ -1,4 +1,4 @@
-extends layout
+//extends layout
 block headermeta
 block headerscripts
   - bodyclass=''
@@ -6,6 +6,46 @@ block headerscripts
   link(rel='stylesheet', href='/css/style.css')
   link(rel='stylesheet', href='/css/main.css')
 block content
-  - var errorAttributes = {'data-bind': {component: {name: 'error', params: exception }}};
-  div&attributes(errorAttributes)
-  .error= labels.about.message
+  //- var errorAttributes = {'data-bind': {component: {name: 'error', params: exception }}};
+  //div&attributes(errorAttributes)
+  .wrapper
+    header
+      .logo
+        -var linkAttributes = {'href': '#'};
+        a.logo-link&attributes(linkAttributes)
+          - var imgAttributes = {'src': '../img/logo.png', 'alt': 'Logo'};
+          img&attributes(imgAttributes)
+      ul.hor-menu
+        - var linkAttributes = {'href': '#'};
+        a&attributes(linkAttributes)
+          li.contacts= labels._menu.contacts
+        - var linkAttributes = {'href': '#'};
+        a&attributes(linkAttributes)
+          li.portfolio= labels._menu.works
+        - var linkAttributes = {'href': '#'};
+        a&attributes(linkAttributes)
+          li.about= labels._menu.about
+    .main-content
+      .page-image
+      .error= labels.about.message
+    footer
+      .left-column
+        h3= labels.footer.social.title
+        ul.social
+          li.pinterest
+            - var linkAttributes = {'href': '#'};
+            a&attributes(linkAttributes) = 'pinterest';
+          li.facebook
+            - var linkAttributes = {'href': '#'};
+            a&attributes(linkAttributes)
+          li.instagram
+            - var linkAttributes = {'href': '#'};
+            a&attributes(linkAttributes)
+          li.google-plus
+            - var linkAttributes = {'href': '#'};
+            a&attributes(linkAttributes) 
+          li.twitter
+            - var linkAttributes = {'href': '#'};
+            a&attributes(linkAttributes)
+      .right-column
+        span= labels.site.copyright
